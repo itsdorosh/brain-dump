@@ -1,0 +1,32 @@
+.dumper {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-template-columns: 3fr 150px;
+    grid-template-areas: "dumper-input btn"
+                         "deadline none";
+
+    grid-gap: 10px;
+
+    input {
+        padding: 0 10px;
+        border-radius: 8px;
+        border: 1px solid #242424;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        font-size: 18px;
+        grid-area: dumper-input;
+    }
+
+    button {
+        grid-area: btn;
+        border: 1px solid #242424;
+    }
+
+    .deadline {
+        grid-area: deadline;
+        display: flex;
+        justify-content: space-between;
+    }
+}

@@ -1,0 +1,36 @@
+#root {
+    width: 80%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 93vh;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+
+    img {
+        width: 48px;
+    }
+}
+
+header {
+    height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-content: flex-end;
+    align-items: center;
+}
+
+main {
+    margin: 50px 0;
+    padding: 40px;
+}
