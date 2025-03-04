@@ -27,15 +27,13 @@ export function Dumper() {
         };
 
         if (!dumpedItem.text) {
-            alert("Please provide text for new item");
+            alert("so I should guess what you want to dump? 🤔");
             return;
         }
 
         setDeadline('2024-07-02');
         setHasDeadline(false);
         setDump('');
-
-        console.log(dumpedItem);
         setItems([...items, dumpedItem]);
     };
 
@@ -45,7 +43,7 @@ export function Dumper() {
                 type="text"
                 value={dump}
                 onChange={({target: {value}}) => setDump(value)}
-                placeholder="Dump the shit in your head here"
+                placeholder="dump the shit that's messing with you here..."
             />
 
             <div className="deadline">
@@ -56,7 +54,7 @@ export function Dumper() {
                         checked={hasDeadline}
                         onChange={() => setHasDeadline(!hasDeadline)}
                     />
-                    <label htmlFor="hasDeadline">Any Deadline? 📆</label>
+                    <label htmlFor="hasDeadline">is this shit has deadline? 🔥</label>
                 </div>
 
                 {hasDeadline && <input
@@ -66,7 +64,7 @@ export function Dumper() {
                 />}
             </div>
 
-            <button type="submit">Save 💾</button>
+            <button type="submit">just dump it</button>
         </form>
     );
 }

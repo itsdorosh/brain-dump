@@ -15,14 +15,16 @@ function App() {
 
     return (<>
         <header>
-            <button id="reveal" onClick={() => setShowShittyList(!showShittyList)}>Reveal ✨</button>
+            <button id="reveal" onClick={() => setShowShittyList(!showShittyList)}>
+                {showShittyList ? "hide and continue dumpin'" : "reveal whats in your brain"}
+            </button>
             {showShittyList && hero}
         </header>
         <main>
             {!showShittyList && hero}
             {showShittyList ? <ShittyList/> : <Dumper/>}
         </main>
-        <p>© itsdorosh | 2024</p>
+        <p>© itsdorosh | 2025</p>
     </>);
 }
 

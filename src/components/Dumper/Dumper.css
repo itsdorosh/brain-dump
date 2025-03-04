@@ -15,7 +15,7 @@
 
     input[type="text"] {
         padding: 10px;
-        font-size: 18px;
+        font-size: 1.2em;
         grid-area: dumper-input;
     }
 
@@ -28,5 +28,34 @@
         grid-area: deadline;
         display: flex;
         justify-content: space-between;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .dumper {
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr;
+        grid-template-areas: "dumper-input"
+                             "btn"
+                             "deadline";
+
+        input[type="text"] .deadline, button {
+            font-size: 1em;
+        }
+
+        button {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .dumper {
+        grid-gap: 5px;
+
+        input[type="text"], .deadline, button {
+            font-size: 0.8em;
+        }
     }
 }
