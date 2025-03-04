@@ -1,6 +1,6 @@
 # Brain Dump
 
-Brain Dump is a React application built with Vite. It aims to provide users with a simple and efficient way to jot down and manage their thoughts and ideas. 
+Brain Dump is a React application built with Vite. It aims to provide users with a simple and efficient way to jot down and manage their thoughts and ideas.
 
 ## Features
 
@@ -13,20 +13,23 @@ Brain Dump is a React application built with Vite. It aims to provide users with
 To get started with the project, follow these steps:
 
 1. Clone the repository:
-    ```sh
-    git clone https://github.com/itsdorosh/brain-dump.git
-    cd brain-dump
-    ```
+
+   ```sh
+   git clone https://github.com/itsdorosh/brain-dump.git
+   cd brain-dump
+   ```
 
 2. Install dependencies:
-    ```sh
-    npm install
-    ```
+
+   ```sh
+   npm install
+   ```
 
 3. Start the development server:
-    ```sh
-    npm run dev
-    ```
+
+   ```sh
+   npm run dev
+   ```
 
 4. Open your browser and navigate to `http://localhost:5173`.
 

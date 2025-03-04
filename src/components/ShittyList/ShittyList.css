@@ -1,59 +1,63 @@
 .grid {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 10px;
-    width: 100%;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 10px;
+  width: 100%;
 }
 
 .grid-item {
-    align-content: center;
-    margin: 0;
-    padding: 10px;
-    box-sizing: border-box;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: relative;
-    word-break: normal;
-    transition: box-shadow 0.5s ease-in-out, scale 0.5s ease-in-out;
+  align-content: center;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  word-break: normal;
+  transition:
+    box-shadow 0.5s ease-in-out,
+    scale 0.5s ease-in-out;
 }
 
 .grid-item:nth-child(odd) {
-    grid-row-end: span 20;
+  grid-row-end: span 20;
 }
 
 .grid-item:nth-child(even) {
-    grid-row-end: span 30;
+  grid-row-end: span 30;
 }
 
 .grid-item:hover {
-    box-shadow: 0 4px 8px rgba(31, 91, 230, 0.5);
+  box-shadow: 0 4px 8px rgba(31, 91, 230, 0.5);
 }
 
 @media (max-width: 600px) {
-    .grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-    .grid-item {
-        padding: 8px;
-        font-size: 14px;
-    }
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .grid-item {
+    padding: 8px;
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 400px) {
-    .grid {
-        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    }
-    .grid-item {
-        padding: 5px;
-        font-size: 12px;
-    }
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .grid-item {
+    padding: 5px;
+    font-size: 12px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-    .grid-item {
-        background-color: #3a3686;
-    }
+  .grid-item {
+    background-color: #3a3686;
+  }
 }

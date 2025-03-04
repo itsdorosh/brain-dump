@@ -1,61 +1,66 @@
 .dumper {
-    display: grid;
-    grid-template-rows: 2fr 1fr;
-    grid-template-columns: 3fr 150px;
-    grid-template-areas: "dumper-input btn"
-                         "deadline none";
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 3fr 150px;
+  grid-template-areas:
+    'dumper-input btn'
+    'deadline none';
 
-    grid-gap: 10px;
+  grid-gap: 10px;
 
-    input {
-        padding: 0 10px;
-        border-radius: 8px;
-        border: 1px solid #242424;
-    }
+  input {
+    padding: 0 10px;
+    border-radius: 8px;
+    border: 1px solid #242424;
+  }
 
-    input[type="text"] {
-        padding: 10px;
-        font-size: 1.2em;
-        grid-area: dumper-input;
-    }
+  input[type='text'] {
+    padding: 10px;
+    font-size: 1.2em;
+    grid-area: dumper-input;
+  }
 
-    button {
-        grid-area: btn;
-        border: 1px solid #242424;
-    }
+  button {
+    grid-area: btn;
+    border: 1px solid #242424;
+  }
 
-    .deadline {
-        grid-area: deadline;
-        display: flex;
-        justify-content: space-between;
-    }
+  .deadline {
+    grid-area: deadline;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-    .dumper {
-        grid-template-rows: auto auto;
-        grid-template-columns: 1fr;
-        grid-template-areas: "dumper-input"
-                             "btn"
-                             "deadline";
+  .dumper {
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'dumper-input'
+      'btn'
+      'deadline';
 
-        input[type="text"] .deadline, button {
-            font-size: 1em;
-        }
-
-        button {
-            width: 100%;
-        }
+    input[type='text'] .deadline,
+    button {
+      font-size: 1em;
     }
+
+    button {
+      width: 100%;
+    }
+  }
 }
 
 @media (max-width: 480px) {
-    .dumper {
-        grid-gap: 5px;
+  .dumper {
+    grid-gap: 5px;
 
-        input[type="text"], .deadline, button {
-            font-size: 0.8em;
-        }
+    input[type='text'],
+    .deadline,
+    button {
+      font-size: 0.8em;
     }
+  }
 }
