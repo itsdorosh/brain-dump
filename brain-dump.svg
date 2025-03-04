@@ -1,0 +1,13 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="32" height="32" rx="6" fill="#6C63FF"/>
+    <path d="M16 2C12.134 2 9 5.13401 9 9V14H23V9C23 5.13401 19.866 2 16 2Z" fill="black"/>
+    <path d="M9 14V19H12V29H14V19H18V29H20V19H23V14H9Z" fill="black"/>
+    <rect x="11" y="10" width="4" height="3" rx="1" fill="#fff">
+        <animate attributeName="height" values="3;0;3" dur="0.2s" begin="0s; anim1.end+6.7s" id="anim1" fill="freeze"/>
+        <animate attributeName="y" values="10;11;10" dur="0.2s" begin="0s; anim1.end+6.7s" id="anim1" fill="freeze"/>
+    </rect>
+    <rect x="17" y="10" width="4" height="3" rx="1" fill="#fff">
+        <animate attributeName="height" values="3;0;3" dur="0.2s" begin="0s; anim1.end+6.7s" id="anim1" fill="freeze" />
+        <animate attributeName="y" values="10;11;10" dur="0.2s" begin="0s; anim1.end+6.7s" id="anim1" fill="freeze"/>
+    </rect>
+</svg>
