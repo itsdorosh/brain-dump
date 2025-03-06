@@ -11,18 +11,24 @@ function countWords(str) {
 }
 
 export function ShittyList() {
-  const [items] = useLocalStorage('items', []);
+  const [items, setItems] = useLocalStorage('items', []);
 
   return (
     <>
-      <div className='grid'>
-        {items.map((item, index) => (
-          <div className='grid-item' style={{ gridRowEnd: `span ${countWords(item.text) + 10}` }} key={index}>
-            <p style={{ fontSize: `${36 - countWords(item.text)}px` }}>{item.text}</p>
-            {item.deadline && <span>📆 {item.deadline}</span>}
-          </div>
-        ))}
-      </div>
+      {items.length ? (
+        <div className='grid'>
+          {items.map((item, index) => (
+            <div className='grid-item' style={{ gridRowEnd: `span ${countWords(item.text) + 10}` }} key={index}>
+              <p style={{ fontSize: `${36 - countWords(item.text)}px` }}>{item.text}</p>
+              {item.deadline && <span>📆 {item.deadline}</span>}
+            </div>
+          ))}
+        </div>
+      ) : (
+        <h2 className='empty-grid-message'>there is nothing to see here, keep on keeping on</h2>
+      )}
+
+      {items.length ? <button onClick={() => setItems([])}>wipe out everything</button> : null}
     </>
   );
 }
